@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class green_balloon : MonoBehaviour
 {
     public Text scoreboard;
-    static int score = 0;
+    
 
     // Start is called before the first frame update
     void Start()

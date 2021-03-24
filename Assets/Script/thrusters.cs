@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class thrusters : MonoBehaviour
 {
-
+    public GameObject ship;
     private Rigidbody2D rb;
-
+    
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = ship.GetComponent<Rigidbody2D>();
     }
     public void GoingUp()
     {
-        rb.AddForce(transform.right * 73f);
-
+        if (ship != null)
+        {
+            rb.AddForce(transform.up * 73f);
+        }
+        
     }
 }

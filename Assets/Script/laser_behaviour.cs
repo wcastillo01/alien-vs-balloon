@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class laser_movement : MonoBehaviour
+public class laser_behaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -19,9 +14,19 @@ public class laser_movement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+        if (collision.tag == "Collider")
+        {
+            Destroy(this.gameObject);
+        }
         if (collision.tag == "blue" || collision.tag == "green")
         {
             Destroy(this.gameObject);
         }
+
+
+
+       
     }
+
+
 }

@@ -7,6 +7,7 @@ TagManager:
   - blue
   - green
   - laser
+  - Collider
   layers:
   - Default
   - TransparentFX
