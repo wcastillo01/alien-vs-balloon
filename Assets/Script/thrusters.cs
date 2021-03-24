@@ -5,8 +5,16 @@ using UnityEngine;
 
 public class thrusters : MonoBehaviour
 {
-    public void ButtonClicked()
+
+    private Rigidbody2D rb;
+
+    private void Start()
     {
-        print("Clicked");
+        rb = GetComponent<Rigidbody2D>();
+    }
+    public void GoingUp()
+    {
+        rb.AddForce(transform.right * 73f);
+
     }
 }

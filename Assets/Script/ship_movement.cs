@@ -19,9 +19,14 @@ public class ship_movement : MonoBehaviour
         {
             Instantiate(laser, transform.position, Quaternion.identity);
         }
-        
+
     }
 
+    public void Shoot()
+    {
+        Instantiate(laser, transform.position, Quaternion.identity);
+  
+    }
     public void GoingUp()
     {
         rb.AddForce(transform.right * 73f);
@@ -34,6 +39,7 @@ public class ship_movement : MonoBehaviour
         if (collision.tag == "Finish")
         {
             Destroy(this.gameObject);
+            Time.timeScale= 0;
         }
     }
 }
