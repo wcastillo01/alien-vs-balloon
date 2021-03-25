@@ -18,6 +18,7 @@ public class laser_behaviour : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
         if (collision.tag == "blue" || collision.tag == "green")
         {
             Destroy(this.gameObject);
