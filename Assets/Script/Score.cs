@@ -8,6 +8,7 @@ public class Score : MonoBehaviour
     public static int ScoreValue = 0;
     Text ScoreText;
     public GameObject Retry;
+    public GameObject Winner;
 
     // Start is called before the first frame update
     void Start()
