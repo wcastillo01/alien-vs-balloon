@@ -744,7 +744,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Clock
+  m_Text: 'Time: 0'
 --- !u!222 &352575766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 566356117}
   - component: {fileID: 566356118}
   m_Layer: 0
-  m_Name: Clock
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -897,9 +897,10 @@ Transform:
   m_LocalPosition: {x: 523.67676, y: 356.5777, z: -248.14784}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1168960438}
   - {fileID: 1929670762}
   m_Father: {fileID: 1497092239}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &566356118
 MonoBehaviour:
@@ -1003,6 +1004,7 @@ GameObject:
   - component: {fileID: 702292975}
   - component: {fileID: 702292977}
   - component: {fileID: 702292976}
+  - component: {fileID: 702292978}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1018,7 +1020,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702292974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -309.13126}
   m_LocalScale: {x: 0.98125, y: 0.98125, z: 0.98125}
   m_Children: []
   m_Father: {fileID: 1168960438}
@@ -1026,7 +1028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -34}
+  m_AnchoredPosition: {x: 140, y: -34}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &702292976
@@ -1061,7 +1063,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 'Helium: 0'
 --- !u!222 &702292977
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1070,6 +1072,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702292974}
   m_CullTransparentMesh: 0
+--- !u!114 &702292978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702292974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f781fd2e3f3954efeaa139bd649ed49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Retry: {fileID: 2012849876}
 --- !u!1 &742212863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1705,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 702292975}
-  m_Father: {fileID: 1497092239}
+  m_Father: {fileID: 566356117}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1963,7 +1978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358241467
 GameObject:
@@ -2603,10 +2618,9 @@ Transform:
   m_LocalPosition: {x: -0.12, y: -0.41301215, z: -60.983414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1168960438}
   - {fileID: 566356117}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1534367075
 GameObject:
@@ -3386,7 +3400,7 @@ RectTransform:
   m_Children:
   - {fileID: 352575764}
   m_Father: {fileID: 566356117}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3487,6 +3501,7 @@ MonoBehaviour:
   Retry: {fileID: 2012849876}
   Buttons: {fileID: 1927198070}
   timer: {fileID: 566356116}
+  score: {fileID: 702292974}
 --- !u!4 &1947206385
 Transform:
   m_ObjectHideFlags: 0
@@ -3542,7 +3557,7 @@ PrefabInstance:
     - target: {fileID: 959410703327143957, guid: b9cf0dffe948343299d26aab6657ff28,
         type: 3}
       propertyPath: m_GravityScale
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2300992593802745906, guid: b9cf0dffe948343299d26aab6657ff28,
         type: 3}

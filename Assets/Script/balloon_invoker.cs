@@ -9,8 +9,8 @@ public class balloon_invoker : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("Spawn_green_balloon", 1f, 0.5f);
-        InvokeRepeating("Spawn_blue_balloon", 1f, 2f);
+        InvokeRepeating("Spawn_green_balloon", 1f, 1.25f);
+        InvokeRepeating("Spawn_blue_balloon", 1f, 0.5f);
     }
 
     void Spawn_green_balloon()

@@ -11,18 +11,16 @@ public class GameManagement : MonoBehaviour
     public GameObject Retry;
     public GameObject Buttons;
     public GameObject timer;
-
-    private Timer time;
+    public GameObject score;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+       
         Time.timeScale = 0;
 
     }
-
 
     public void PlayButton()
     {
@@ -30,6 +28,7 @@ public class GameManagement : MonoBehaviour
         Buttons.SetActive(true);
         Time.timeScale = 1;
         timer.SetActive(true);
+        score.SetActive(true);
     }
 
     public void PauseButton()
@@ -55,5 +54,6 @@ public class GameManagement : MonoBehaviour
         Score.ScoreValue = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
+
+ 
 }
