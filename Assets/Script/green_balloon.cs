@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class green_balloon : MonoBehaviour
 {
     float random_speed;
-
+    public new GameObject animation;
     // Start is called before the first frame update
     void Start()
     { 
@@ -34,7 +34,8 @@ public class green_balloon : MonoBehaviour
         {
             Destroy(this.gameObject);
             Score.ScoreValue++;
-            
+            Instantiate(animation, transform.position, transform.rotation);
+
         }
     }
 }
