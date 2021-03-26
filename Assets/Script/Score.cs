@@ -29,12 +29,12 @@ public class Score : MonoBehaviour
             Retry.SetActive(true);
         }
 
-        //if(ScoreValue >= 500)
-        //{
-        //    Time.timeScale = 0;
-        //    ScoreText.text = "Helium: 500+";
-        //    Winner.SetActive(true);
-        //}
+        if (ScoreValue >= 500)
+        {
+            Time.timeScale = 0;
+            ScoreText.text = "Helium: 500+";
+            Winner.SetActive(true);
+        }
 
     }
 
