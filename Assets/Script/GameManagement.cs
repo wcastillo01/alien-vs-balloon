@@ -10,6 +10,9 @@ public class GameManagement : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject Retry;
     public GameObject Buttons;
+    public Text clock;
+
+    private bool timer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +22,27 @@ public class GameManagement : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if(timer)
+        {
+            clock.text = Time.time.ToString("F0");
+        }
+    }
+
     public void PlayButton()
     {
         MainMenu.SetActive(false);
         Buttons.SetActive(true);
         Time.timeScale = 1;
+        timer = true;
     }
 
     public void PauseButton()
     {
         Time.timeScale = 0;
         PauseMenu.SetActive(true);
+        timer = false;
     }
 
     public void RetryButton()
@@ -44,6 +57,7 @@ public class GameManagement : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
+        timer = true;
     }
 
     public void ExitToMenu()
