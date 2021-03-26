@@ -5,22 +5,21 @@ using UnityEngine.UI;
 
 public class green_balloon : MonoBehaviour
 {
-    public Text scoreboard;
-    
-
+    float random_speed;
     // Start is called before the first frame update
     void Start()
     {
 
-        float random = Random.Range(-10, -1);
+        float random_position = Random.Range(-10, -1);
+        random_speed = Random.Range(1f, 2.5f);
 
-        transform.position = new Vector2(random, -6.12f);
+        transform.position = new Vector2(random_position, -6.12f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up * 2.5f * Time.deltaTime, Space.Self);
+        transform.Translate(Vector2.up * random_speed * Time.deltaTime, Space.Self);
     }
 
 
@@ -35,9 +34,6 @@ public class green_balloon : MonoBehaviour
 
         if (collision.tag == "laser")
         {
-            //score += 1;
-            //scoreboard.text = score.ToString();
-            //scoreboard.GetComponent<Text>().text = score.ToString();
             Destroy(this.gameObject);
         }
     }
