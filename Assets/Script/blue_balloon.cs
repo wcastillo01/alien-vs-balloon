@@ -22,9 +22,17 @@ public class blue_balloon: MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.tag == "Finish" || collision.tag == "laser")
+
+        if (collision.tag == "Finish")
         {
             Destroy(this.gameObject);
+        }
+
+        if (collision.CompareTag("laser"))
+        {
+            Destroy(this.gameObject);
+            Score.ScoreValue+= 10;
+
         }
     }
 }

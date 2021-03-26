@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class green_balloon : MonoBehaviour
 {
     float random_speed;
+
     // Start is called before the first frame update
     void Start()
-    {
-
+    { 
         float random_position = Random.Range(-10, -1);
         random_speed = Random.Range(1f, 2.5f);
 
@@ -22,19 +22,19 @@ public class green_balloon : MonoBehaviour
         transform.Translate(Vector2.up * random_speed * Time.deltaTime, Space.Self);
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.tag == "Finish")
         {
-           
             Destroy(this.gameObject);
         }
 
-        if (collision.tag == "laser")
+        if (collision.CompareTag("laser"))
         {
             Destroy(this.gameObject);
+            Score.ScoreValue++;
+            
         }
     }
 }

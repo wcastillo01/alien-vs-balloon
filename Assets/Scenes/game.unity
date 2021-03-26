@@ -885,7 +885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &566356117
 Transform:
   m_ObjectHideFlags: 0
@@ -1024,11 +1024,11 @@ RectTransform:
   m_Father: {fileID: 1168960438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 630, y: 250}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 120, y: -34}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &702292976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1042,18 +1042,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 6c39d07ad51af4f2c81e563e0cb849c4, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 89
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3486,6 +3486,7 @@ MonoBehaviour:
   PauseMenu: {fileID: 1642496549}
   Retry: {fileID: 2012849876}
   Buttons: {fileID: 1927198070}
+  timer: {fileID: 566356116}
 --- !u!4 &1947206385
 Transform:
   m_ObjectHideFlags: 0
@@ -3538,6 +3539,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 959410703327143957, guid: b9cf0dffe948343299d26aab6657ff28,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2300992593802745906, guid: b9cf0dffe948343299d26aab6657ff28,
         type: 3}
       propertyPath: m_Name
@@ -3546,7 +3552,7 @@ PrefabInstance:
     - target: {fileID: 3484558246168909362, guid: b9cf0dffe948343299d26aab6657ff28,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4152108028737889978, guid: b9cf0dffe948343299d26aab6657ff28,
         type: 3}

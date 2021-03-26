@@ -10,6 +10,7 @@ public class GameManagement : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject Retry;
     public GameObject Buttons;
+    public GameObject timer;
 
     private Timer time;
 
@@ -28,6 +29,7 @@ public class GameManagement : MonoBehaviour
         MainMenu.SetActive(false);
         Buttons.SetActive(true);
         Time.timeScale = 1;
+        timer.SetActive(true);
     }
 
     public void PauseButton()
@@ -38,6 +40,7 @@ public class GameManagement : MonoBehaviour
 
     public void RetryButton()
     {
+        Score.ScoreValue = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -49,6 +52,7 @@ public class GameManagement : MonoBehaviour
 
     public void ExitToMenu()
     {
+        Score.ScoreValue = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
