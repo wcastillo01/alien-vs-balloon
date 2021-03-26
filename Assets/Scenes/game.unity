@@ -878,6 +878,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 566356117}
+  - component: {fileID: 566356118}
   m_Layer: 0
   m_Name: Clock
   m_TagString: Untagged
@@ -900,6 +901,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &566356118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566356116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160126e4cdb9341beb00f6dc29329e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer_on: 0
+  clock: {fileID: 352575765}
 --- !u!1 &646619795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,6 +2123,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 566356118}
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1377402464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3065,6 +3091,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 566356118}
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1771560621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3189,6 +3226,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1947206384}
         m_MethodName: ExitToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 566356118}
+        m_MethodName: ResetTimer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3404,7 +3452,6 @@ MonoBehaviour:
   PauseMenu: {fileID: 1642496549}
   Retry: {fileID: 2012849876}
   Buttons: {fileID: 1927198070}
-  clock: {fileID: 352575765}
 --- !u!4 &1947206385
 Transform:
   m_ObjectHideFlags: 0
