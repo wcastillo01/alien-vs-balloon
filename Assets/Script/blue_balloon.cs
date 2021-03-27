@@ -6,6 +6,7 @@ public class blue_balloon: MonoBehaviour
 {
 
     public new GameObject animation;
+    public GameObject sound;
     //public AudioSource SFX;
 
     // Start is called before the first frame update
@@ -14,6 +15,8 @@ public class blue_balloon: MonoBehaviour
         float random = Random.Range(-10, -1);
 
         transform.position = new Vector2(random, -6.12f);
+
+        sound = GameObject.Find("SoundManager");
     }
 
     // Update is called once per frame
@@ -37,7 +40,7 @@ public class blue_balloon: MonoBehaviour
             Destroy(this.gameObject);
             Score.ScoreValue+= 10;
             Instantiate(animation, transform.position, transform.rotation);
-            //SFX.Play();
+            sound.GetComponent<SoundFX>().PopSound();
         }
     }
 }

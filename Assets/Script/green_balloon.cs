@@ -7,6 +7,7 @@ public class green_balloon : MonoBehaviour
 {
     float random_speed;
     public new GameObject animation;
+    public GameObject sound;
  
 
     // Start is called before the first frame update
@@ -16,6 +17,8 @@ public class green_balloon : MonoBehaviour
         random_speed = Random.Range(1f, 2.5f);
 
         transform.position = new Vector2(random_position, -6.12f);
+
+        sound = GameObject.Find("SoundManager");
     }
 
     // Update is called once per frame
@@ -37,6 +40,7 @@ public class green_balloon : MonoBehaviour
             Score.ScoreValue++;
             Destroy(this.gameObject);
             Instantiate(animation, transform.position, transform.rotation);
+            sound.GetComponent<SoundFX>().PopSound();
            
         }
     }
