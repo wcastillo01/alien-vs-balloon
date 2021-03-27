@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class OffsetScrolling : MonoBehaviour
 {
-    public float scrollSpeed;
+    [Range(-1f,1f)]
+    public float scrollSpeed = 0.01f;
 
-    private new Renderer renderer;
-    private Vector2 savedOffset;
+    private float offset;
+    private Material mat;
 
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        mat = GetComponent<Renderer>().material;
     }
 
     void Update()
     {
-        float x = Mathf.Repeat(Time.time * scrollSpeed, 1);
-        Vector2 offset = new Vector2(x, 0);
-        renderer.sharedMaterial.SetTextureOffset("_MainTex", offset);
+        offset += (Time.timeScale * scrollSpeed)/10f;
+        mat.SetTextureOffset("_MainTex", new Vector2(offset, 0));
     }
 }
