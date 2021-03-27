@@ -145,3 +145,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animation: {fileID: 7206332873533479098, guid: 67c829c29d9134fffbb13008750b4d49,
     type: 3}
+  SFX: {fileID: 5596207822753194787, guid: 348acba756a504de09e4eb8c2e27f98e, type: 3}

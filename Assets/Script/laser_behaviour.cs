@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class laser_behaviour : MonoBehaviour
 {
+    AudioSource SFX;
 
+    private void Start()
+    {
+        SFX = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -21,12 +26,9 @@ public class laser_behaviour : MonoBehaviour
 
         if (collision.tag == "blue" || collision.tag == "green")
         {
+            SFX.Play();
             Destroy(this.gameObject);
-        }
-
-
-
-       
+        }    
     }
 
 

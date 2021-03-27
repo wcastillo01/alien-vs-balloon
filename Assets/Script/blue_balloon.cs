@@ -6,6 +6,7 @@ public class blue_balloon: MonoBehaviour
 {
 
     public new GameObject animation;
+    //public AudioSource SFX;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class blue_balloon: MonoBehaviour
             Destroy(this.gameObject);
             Score.ScoreValue+= 10;
             Instantiate(animation, transform.position, transform.rotation);
+            //SFX.Play();
         }
     }
 }

@@ -7,9 +7,11 @@ public class green_balloon : MonoBehaviour
 {
     float random_speed;
     public new GameObject animation;
+ 
+
     // Start is called before the first frame update
     void Start()
-    { 
+    {
         float random_position = Random.Range(-10, -1);
         random_speed = Random.Range(1f, 2.5f);
 
@@ -32,10 +34,10 @@ public class green_balloon : MonoBehaviour
 
         if (collision.CompareTag("laser"))
         {
-            Destroy(this.gameObject);
             Score.ScoreValue++;
+            Destroy(this.gameObject);
             Instantiate(animation, transform.position, transform.rotation);
-
+           
         }
     }
 }

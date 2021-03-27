@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        clock.text = timer.ToString("F0");
+        clock.text = "Timer: " + timer.ToString("F0");
     }
 
 
@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
     {
     
         timer += Time.deltaTime;
-        clock.text = timer.ToString("F0");
+        clock.text = "Timer: " + timer.ToString("F0");
         
     }
 
