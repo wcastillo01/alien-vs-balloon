@@ -37,12 +37,6 @@ public class GameManagement : MonoBehaviour
         PauseMenu.SetActive(true);
     }
 
-    public void RetryButton()
-    {
-        Score.ScoreValue = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void ResumeButton()
     {
         PauseMenu.SetActive(false);
