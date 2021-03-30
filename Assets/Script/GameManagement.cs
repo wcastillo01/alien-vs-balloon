@@ -8,7 +8,6 @@ public class GameManagement : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject PauseMenu;
-    public GameObject Retry;
     public GameObject Buttons;
     public GameObject timer;
     public GameObject score;
